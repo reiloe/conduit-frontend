@@ -1,0 +1,15 @@
+# development files/folders
+node_modules/
+
+# Docs
+*.md
+
+# git project folders
+.husky
+.git
+.gitignore
+.browserslistrc
+
+# Environment configuration
+.env*
+env*
