@@ -7,8 +7,7 @@ WORKDIR /app
 FROM base AS build
 
 COPY . .
-
-RUN sed -i'.bak' -e "s/#SERVERIP/$SERVERIP/g" srv/environments/environment.ts
+RUN sed -i'.bak' -e "s/#SERVERIP/$SERVERIP/g" src/environments/environment.ts
 RUN npm install && npm run build -- --configuration production
 ##############################################
 FROM nginx:latest
